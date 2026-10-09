@@ -26,7 +26,11 @@ function formatDnsmasq(line) {
   // Remove dnsmasq + PID
   let txt = line.replaceAll(/ dnsmasq\[\d*\]/gu, "");
 
-  if (line.includes("denied") || line.includes("gravity blocked")) {
+  if (
+    line.includes("denied") ||
+    line.includes("gravity blocked") ||
+    line.includes("cyrillic blocked")
+  ) {
     // Red bold text for blocked domains
     txt = `<strong class="log-red">${txt}</strong>`;
   } else if (line.includes("query[A") || line.includes("query[DHCP")) {

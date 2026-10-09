@@ -103,6 +103,24 @@ PageTitle = "DNS Settings"
                         </div>
                     </div>
                 </div>
+                <div class="card card-warning card-outline">
+                    <div class="card-header">
+                        <h3 class="card-title" data-configkeys="dns.blocking.cyrillic">Cyrillic domain blocking</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="dns.blocking.cyrillic" data-key="dns.blocking.cyrillic">
+                                    <label class="form-check-label" for="dns.blocking.cyrillic"><strong>Block domains containing Cyrillic characters</strong></label>
+                                    <p class="help-block">Blocks domains containing Cyrillic characters to protect against look-alike (homograph) domains.
+                                        Legitimate Cyrillic domains (e.g. Russian, Ukrainian, Bulgarian sites) will also be blocked.
+                                        Disabled by default. An exact allowlist entry still permits a specific domain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="card card-warning card-outline settings-level-expert d-none">
                     <div class="card-header">
                         <h3 class="card-title" data-configkeys="dns.domain.name dns.expandHosts">DNS domain settings</h3>
