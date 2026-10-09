@@ -245,6 +245,15 @@ function parseQueryStatus(data) {
       isCNAME = true;
       blocked = true;
       break;
+    case "CYRILLIC":
+      colorClass = "text-red";
+      icon = "fa-solid fa-ban";
+      fieldtext = "Blocked (Cyrillic)";
+      buttontext = buttonAllow;
+      // Same status is used when the Cyrillic name is a CNAME target. Show that target when present.
+      isCNAME = typeof data.cname === "string" && data.cname.length > 0;
+      blocked = true;
+      break;
     case "RETRIED":
       colorClass = "text-green";
       icon = "fa-solid fa-redo"; // fa-repeat
